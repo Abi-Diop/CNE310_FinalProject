@@ -14,7 +14,7 @@ defroot():
 
         # Show all items
 
-        #cur.execute('SELECT productId, name, price, description, image, stock FROM products LIMIT 1')
+        cur.execute('SELECT productId, name, price, description, image, stock FROM products LIMIT 1')
 
         item_data= cur.fetchall()
 
@@ -24,9 +24,9 @@ defroot():
 
         # Show all categories
 
-        #cur.execute('SELECT categoryId, name FROM categories')
+        cur.execute('SELECT categoryId, name FROM categories')
 
-        #category_data = cur.fetchall()
+        category_data = cur.fetchall()
 
     item_data= parse(item_data)
 
